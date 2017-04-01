@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		com.sankara.check_box.Window window = new com.sankara.check_box.Window();
+		com.sankara.radio_box.Window window = new com.sankara.radio_box.Window();
 	}
 }
 
