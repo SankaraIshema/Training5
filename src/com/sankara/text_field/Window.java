@@ -53,9 +53,16 @@ public class Window extends JFrame {
 
 		@Override
 		public void keyReleased(KeyEvent arg0) {
-			System.out.println("Realeased key code : " + arg0.getKeyCode() + "\n\t-character released : " 
-					+ arg0.getKeyChar());
-			pause();			
+			if(!isNumeric(arg0.getKeyChar())) {
+				textField.setText(textField.getText().replace(String.valueOf(arg0.getKeyChar()), ""));
+				
+				System.out.println("Key released is not a number.");
+			}
+			else {
+				System.out.println("Realeased key code : " + arg0.getKeyCode() + "\n\t-character released : " 
+						+ arg0.getKeyChar());
+				pause();
+			}			
 		}
 
 		@Override
@@ -68,7 +75,7 @@ public class Window extends JFrame {
 	
 	public void pause() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} 
 		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -76,4 +83,14 @@ public class Window extends JFrame {
 		}
 	}
 	
+	public boolean isNumeric(char carac) {
+		
+		try {
+			Integer.parseInt(String.valueOf(carac));
+		}
+		catch(NumberFormatException e) { 
+			return false;
+		}
+		return true;
+	}
 }
