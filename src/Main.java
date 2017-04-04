@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		com.sankara.text_field.Window window = new com.sankara.text_field.Window();
+		com.sankara.menu.Window window = new com.sankara.menu.Window();
 	}
 }
 
