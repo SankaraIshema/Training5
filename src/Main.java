@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		com.sankara.menu.Window window = new com.sankara.menu.Window();
+		com.sankara.split_pane.Window window = new com.sankara.split_pane.Window();
 	}
 }
 
